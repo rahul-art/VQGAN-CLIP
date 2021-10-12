@@ -1,6 +1,6 @@
 import subprocess
 subprocess.call(["chmod", "+x", "download_models.sh"]) 
-subprocess.run("download_models.sh")
+subprocess.run("VQGAN-CLIP/download_models.sh")
 subprocess.call(['git', 'clone', "https://github.com/openai/CLIP"])
 subprocess.call(['git', 'clone', "https://github.com/CompVis/taming-transformers"])
 import gradio as gr 
