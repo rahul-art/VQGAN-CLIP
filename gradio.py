@@ -11,5 +11,5 @@ def outbreak_forecast(Practice):
   return "output.png"
 
 
-iface = gr.Interface(fn=outbreak_forecast,"text", 'image')#
+iface = gr.Interface(fn=outbreak_forecast,inputs="text",outputs= 'image')#
 iface.launch(debug=True)
