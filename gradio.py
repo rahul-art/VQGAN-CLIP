@@ -1,5 +1,5 @@
 import subprocess
-chmod +x download_models.sh
+subprocess.call(["chmod", "+x", "download_models.sh"]) 
 subprocess.call("download_models.sh")
 subprocess.call(['git', 'clone', "https://github.com/openai/CLIP"])
 subprocess.call(['git', 'clone', "https://github.com/CompVis/taming-transformers"])
