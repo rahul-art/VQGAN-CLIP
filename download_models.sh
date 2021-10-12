@@ -4,8 +4,8 @@ mkdir -p "$LOC"
 
 # Which models to download?
 IMAGENET_1024=false
-IMAGENET_16384=true
-GUMBEL=false
+IMAGENET_16384=false
+GUMBEL=true
 #WIKIART_1024=false
 WIKIART_16384=false
 COCO=false
