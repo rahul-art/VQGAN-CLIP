@@ -4,7 +4,7 @@ subprocess.call(['git', 'clone', "https://github.com/openai/CLIP"])
 subprocess.call(['git', 'clone', "https://github.com/CompVis/taming-transformers"])
 import gradio as gr 
 def outbreak_forecast(Practice):
-  python generate.py -p f"{Practice}"
+  subprocess.call(["python", "generate.py","-p", f"{Practice}"])
   return "output.png"
 
 Practice = gr.inputs.Textbox()
