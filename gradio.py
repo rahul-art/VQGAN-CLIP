@@ -10,9 +10,6 @@ def outbreak_forecast(Practice):
   subprocess.call(["python", "generate.py","-p", f"{Practice}","-i", 50,"--vqgan_config", "checkpoints/vqgan_gumbel_f8_8192.yaml", "--vqgan_checkpoint", "checkpoints/vqgan_gumbel_f8_8192.ckpt"])
   return "output.png"
 
-Practice = gr.inputs.Textbox()
-output = gr.outputs.Image()
 
-iface = gr.Interface(fn=outbreak_forecast,
-    inputs=[Practice], outputs=output)#
+iface = gr.Interface(fn=outbreak_forecast,"text", 'image')#
 iface.launch(debug=True)
