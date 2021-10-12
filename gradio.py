@@ -1,4 +1,5 @@
-bash download_models.sh
+import subprocess
+subprocess.call("download_models.sh")
 git clone 'https://github.com/openai/CLIP'
 git clone 'https://github.com/CompVis/taming-transformers'
 import gradio as gr 
