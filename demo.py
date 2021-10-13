@@ -7,7 +7,7 @@ subprocess.call(['git', 'clone', "https://github.com/openai/CLIP"])
 subprocess.call(['git', 'clone', "https://github.com/CompVis/taming-transformers"])
 import gradio as gr 
 def outbreak_forecast(Practice):
-  subprocess.call(["python", "generate.py","-p", f"{Practice}","-i", "50"])
+  subprocess.call(["python", "generate.py","-p", f"{Practice}","-i", "50",'--vqgan_config', 'checkpoints/vqgan_imagenet_f16_1024.yaml', '--vqgan_checkpoint', 'checkpoints/vqgan_imagenet_f16_1024.ckpt'])
   return "output.png"
 
 
